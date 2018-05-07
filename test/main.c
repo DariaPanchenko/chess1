@@ -76,6 +76,19 @@ CTEST(Queen_Move, Inco) {
     ASSERT_EQUAL(expected,result);
 }
 
+CTEST(King_Move, Cor) {
+    board_func("e2-e4", 1);
+    int result = board_func("e1-e2", 1);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
+}
+
+CTEST(King_Move, Incor) {
+    int result = board_func("e1-g3", 1);
+    int expected = -1;
+    ASSERT_EQUAL(expected,result);
+}
+
 int main(int argc, const char** argv)
 {   _board();
     return ctest_main(argc, argv);
