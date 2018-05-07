@@ -10,11 +10,12 @@ CTEST(Data, Cor_Data) {
 	ASSERT_EQUAL(expected,result);
 }
 
-CTEST(Data,Incor_Data) {
+CTEST(Data, Incor_Data) {
 	int result = board_func("kf2-f3",1);
 	int expected =-1;
 	ASSERT_EQUAL(expected,result);
 }
+
 
 int main(int argc, const char** argv)
 {   _board();
