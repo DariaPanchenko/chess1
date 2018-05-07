@@ -16,6 +16,18 @@ CTEST(Data, Incor_Data) {
 	ASSERT_EQUAL(expected,result);
 }
 
+CTEST(P_Move, Cor) {
+    int result = board_func("f2-f3", 1);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
+}
+
+CTEST(P_Move, Incor) {
+    int result = board_func("f2-f3", 1);
+    int expected = -1;
+    ASSERT_EQUAL(expected,result);
+}
+
 
 int main(int argc, const char** argv)
 {   _board();
