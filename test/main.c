@@ -52,6 +52,18 @@ CTEST(Knight_Move, Incor) {
     ASSERT_EQUAL(expected,result);
 }
 
+CTEST(Bishop_Move, Correct) {
+    int result = board_func("c1-a3", 1);
+    int expected = 0;
+    ASSERT_EQUAL(expected,result);
+}
+
+CTEST(Bishop_Move, Incorrect) {
+    int result = board_func("c1-g3", 1);
+    int expected = -1;
+    ASSERT_EQUAL(expected,result);
+}
+
 int main(int argc, const char** argv)
 {   _board();
     return ctest_main(argc, argv);
